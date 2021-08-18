@@ -31,6 +31,7 @@ async def start(bot, cmd):
                         parse_mode="markdown",
                         disable_web_page_preview=True
                     )
+                    return
             except UserNotParticipant:
                 ident, file_id = cmd.text.split("_-_-_-_")
                 await bot.send_message(
