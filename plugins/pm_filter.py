@@ -1,5 +1,5 @@
 #Kanged From @TroJanZheX
-from info import AUTH_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, API_KEY, AUTH_GROUPS
+from info import AUTH_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, API_KEY, AUTH_GROUPS, BANNED_USER
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters
 import re
@@ -16,6 +16,15 @@ async def filter(client, message):
         try:
             user = await client.get_chat_member(int(AUTH_CHANNEL), message.from_user.id)
             if user.status == "kicked":
+                await client.send_message(
+                    chat_id=message.from_user.id,
+                    text="mf got banned sad",
+                    parse_mode="markdown",
+                    disable_web_page_preview=True
+                )
+                return
+            userid = int(message.from_user.id)
+            if userid in BANNED_USER:
                 await client.send_message(
                     chat_id=message.from_user.id,
                     text="mf got banned sad",
