@@ -29,7 +29,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Messages
 default_start_msg = """
-**Hi, I'm Media Search Bot or ypu can call me as Auto-Filter Bot**
+**Hi, I'm Media Search Bot or you can call me as Auto-Filter Bot**
 Here you can search files in Inline mode as well as PM, Use the below buttons to search files or send me the name of file to search.
 """
 START_MSG = environ.get('START_MSG', default_start_msg)
@@ -44,3 +44,4 @@ if OMDB_API_KEY.strip() == "":
     API_KEY=None
 else:
     API_KEY=OMDB_API_KEY
+BANNED_USER = [int(banned) if id_pattern.search(banned) else banned for banned in environ.get('BANNED_USER', '').split()]

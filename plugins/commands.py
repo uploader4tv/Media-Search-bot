@@ -2,7 +2,7 @@ import os
 import logging
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from info import START_MSG, CHANNELS, ADMINS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION
+from info import START_MSG, CHANNELS, ADMINS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION, BANNED_USER
 from utils import Media, get_file_details
 from pyrogram.errors import UserNotParticipant
 logger = logging.getLogger(__name__)
@@ -23,6 +23,14 @@ async def start(bot, cmd):
                         disable_web_page_preview=True
                     )
                     return
+                userid = int(cmd.from_user.id)
+                if userid in BANNED_USER:
+                    await bot.send_message(
+                        chat_id=cmd.from_user.id,
+                        text="ah, you're banned lmao",
+                        parse_mode="markdown",
+                        disable_web_page_preview=True
+                    )
             except UserNotParticipant:
                 ident, file_id = cmd.text.split("_-_-_-_")
                 await bot.send_message(
