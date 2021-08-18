@@ -3,7 +3,7 @@ from pyrogram import Client, emoji, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InlineQueryResultCachedDocument
 
 from utils import get_search_results, is_subscribed
-from info import CACHE_TIME, AUTH_USERS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION
+from info import CACHE_TIME, AUTH_USERS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION, BANNED_USER
 
 logger = logging.getLogger(__name__)
 cache_time = 0 if AUTH_USERS or AUTH_CHANNEL else CACHE_TIME
@@ -18,6 +18,13 @@ async def answer(bot, query):
                            cache_time=0,
                            switch_pm_text='You have to subscribe my channel to use the bot',
                            switch_pm_parameter="subscribe")
+        return
+    userid = int(query.from_user.id)
+    if userid in BANNED_USER:
+        await query.answer(results=[],
+                           cache_time=0,
+                           switch_pm_text='You are banned to use the bot motherfucker!',
+                           switch_pm_parameter="subinps")
         return
 
     results = []
