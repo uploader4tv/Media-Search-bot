@@ -112,7 +112,7 @@ async def start(bot, cmd):
                         InlineKeyboardButton("Other Bots", url="https://t.me/tvseriesg")
                     ],
                     [
-                        InlineKeyboardButton("Tutorial", url="https://telegra.ph/TUTORIAL-FOR-BOT-08-03")
+                        InlineKeyboardButton("Tutorial", url="https://telegra.ph/TUTORIAL-FOR-BOT-08-03"),
                         InlineKeyboardButton("Request", url="https://t.me/tvseriesreq")
                     ]
                 ]
