@@ -16,14 +16,14 @@ async def answer(bot, query):
     if AUTH_CHANNEL and not await is_subscribed(bot, query):
         await query.answer(results=[],
                            cache_time=0,
-                           switch_pm_text='You have to subscribe my channel to use the bot',
+                           switch_pm_text='Click here to access the bot',
                            switch_pm_parameter="subscribe")
         return
     userid = int(query.from_user.id)
     if userid in BANNED_USER:
         await query.answer(results=[],
                            cache_time=0,
-                           switch_pm_text='You are banned to use the bot motherfucker!',
+                           switch_pm_text='Error405 : Motherfuckers are prohibited from the bot',
                            switch_pm_parameter="subinps")
         return
 
@@ -76,7 +76,7 @@ async def answer(bot, query):
                            next_offset=str(next_offset))
     else:
 
-        switch_pm_text = f'{emoji.CROSS_MARK} No results'
+        switch_pm_text = f'{emoji.CROSS_MARK} Tip : Remove any punctuation marks'
         if string:
             switch_pm_text += f' for "{string}"'
 
@@ -91,7 +91,7 @@ def get_reply_markup(query):
     buttons = [
         [
             InlineKeyboardButton('Search again', switch_inline_query_current_chat=query),
-            InlineKeyboardButton('More Bots', url='https://t.me/tvseriesg')
+            InlineKeyboardButton('Request Shows', url='https://t.me/tvseriesreq')
         ]
         ]
     return InlineKeyboardMarkup(buttons)
