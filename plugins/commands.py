@@ -27,7 +27,7 @@ async def start(bot, cmd):
                 if userid in BANNED_USER:
                     await bot.send_message(
                         chat_id=cmd.from_user.id,
-                        text="ah, you're banned lmao",
+                        text="you are restricted from using the bot, **fuckoff** please",
                         parse_mode="markdown",
                         disable_web_page_preview=True
                     )
@@ -75,8 +75,8 @@ async def start(bot, cmd):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('Search again', switch_inline_query_current_chat=''),
-                        InlineKeyboardButton('More Bots', url='https://t.me/tvseriesg')
+                        InlineKeyboardButton('Search Again', switch_inline_query_current_chat=''),
+                        InlineKeyboardButton('Request Shows', url='https://t.me/tvseriesreq')
                     ]
                     ]
                 await bot.send_cached_media(
@@ -86,12 +86,12 @@ async def start(bot, cmd):
                     reply_markup=InlineKeyboardMarkup(buttons)
                     )
         except Exception as err:
-            await cmd.reply_text(f"Something motherfucking error smh** `{err}`")
+            await cmd.reply_text(f"Something motherfucking error : ** `{err}`")
     elif len(cmd.command) > 1 and cmd.command[1] == 'subscribe':
         invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
         await bot.send_message(
             chat_id=cmd.from_user.id,
-            text="**Subscribe To The Request Group**",
+            text="**Bot Exclusive To Group Members ↓**",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -113,6 +113,7 @@ async def start(bot, cmd):
                     ],
                     [
                         InlineKeyboardButton("Tutorial", url="https://telegra.ph/TUTORIAL-FOR-BOT-08-03")
+                        InlineKeyboardButton("Request", url="https://t.me/tvseriesreq")
                     ]
                 ]
             )
