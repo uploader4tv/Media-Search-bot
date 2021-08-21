@@ -20,7 +20,7 @@ async def answer(bot, query):
                            switch_pm_parameter="subscribe")
         return
     userid = int(query.from_user.id)
-    if userid in BANNED_USER:
+    if BANNED_USER and userid in BANNED_USER:
         await query.answer(results=[],
                            cache_time=0,
                            switch_pm_text='You are banned to use the bot motherfucker!',
