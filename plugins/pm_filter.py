@@ -35,11 +35,11 @@ async def filter(client, message):
         except UserNotParticipant:
             await client.send_message(
                 chat_id=message.from_user.id,
-                text="**@tvseriesreq for requests**",
+                text="Bot Exclusive To Group Members ↓",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("Bot Exclusive To Group Members ↓", url=invite_link.invite_link)
+                            InlineKeyboardButton("Request Group", url=invite_link.invite_link)
                         ]
                     ]
                 ),
