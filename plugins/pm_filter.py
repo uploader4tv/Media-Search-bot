@@ -39,7 +39,7 @@ async def filter(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("Request Group", url=invite_link.invite_link)
+                            InlineKeyboardButton("Request Group", url='t.me/tvseriesreq')
                         ]
                     ]
                 ),
