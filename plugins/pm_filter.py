@@ -23,15 +23,6 @@ async def filter(client, message):
                     disable_web_page_preview=True
                 )
                 return
-            userid = int(message.from_user.id)
-            if userid in BANNED_USER:
-                await client.send_message(
-                    chat_id=message.from_user.id,
-                    text="mf got banned sad",
-                    parse_mode="markdown",
-                    disable_web_page_preview=True
-                )
-                return
         except UserNotParticipant:
             await client.send_message(
                 chat_id=message.from_user.id,
@@ -54,6 +45,26 @@ async def filter(client, message):
                 disable_web_page_preview=True
             )
             return
+    if BANNED_USER:
+        try:
+            userid = int(message.from_user.id)
+            if userid in BANNED_USER:
+                await client.send_message(
+                    chat_id=message.from_user.id,
+                    text="mf got banned sad",
+                    parse_mode="markdown",
+                    disable_web_page_preview=False
+                )
+                return
+        except Exception:
+            await client.send_message(
+                chat_id=message.from_user.id,
+                text="Something went Wrong.",
+                parse_mode="markdown",
+                disable_web_page_preview=False
+            )
+            return
+
     if re.findall("((^\/|^,|^!|^\.|^[\U0001F600-\U000E007F]).*)", message.text):
         return
     if 2 < len(message.text) < 100:    
