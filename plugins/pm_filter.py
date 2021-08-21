@@ -109,7 +109,7 @@ async def filter(client, message):
         if API_KEY:
             poster=await get_poster(search)
         if poster:
-            await message.reply_photo(photo=poster, caption=f"<b>RESULTS FOR YOUR REQUEST MATE -{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_photo(photo=poster, caption=f"<b>RESULTS FOR YOUR REQUEST MATE {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
         else:
             await message.reply_text(f"<b>RESULTS FOR YOUR REQUEST MATE -{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
 
@@ -154,7 +154,7 @@ async def group(client, message):
             if API_KEY:
                 poster=await get_poster(search)
             if poster:
-                await message.reply_photo(photo=poster, caption=f"<b>RESULTS FOR YOUR REQUEST MATE - {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_photo(photo=poster, caption=f"<b>RESULTS FOR YOUR REQUEST MATE {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
             else:
                 await message.reply_text(f"<b>RESULTS FOR YOUR REQUEST MATE- {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
             return
@@ -172,7 +172,7 @@ async def group(client, message):
         if API_KEY:
             poster=await get_poster(search)
         if poster:
-            await message.reply_photo(photo=poster, caption=f"<bRESULTS FOR YOUR REQUEST MATE - {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_photo(photo=poster, caption=f"<bRESULTS FOR YOUR REQUEST MATE  {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
         else:
             await message.reply_text(f"<b>RESULTS FOR YOUR REQUEST MATE - {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
 
@@ -281,8 +281,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "about":
             buttons = [
                 [
-                    InlineKeyboardButton('Request Group', url='https://t.me/uploader4films'),
-                    InlineKeyboardButton('Tutorial', url='https://telegra.ph/TUTORIAL-FOR-THE-BOT-08-19')
+                    InlineKeyboardButton('Request Group', url='https://t.me/tvseriesreq'),
+                    InlineKeyboardButton('Tutorial', url='https://telegra.ph/TUTORIAL-FOR-BOT-08-03')
                 ]
                 ]
             
@@ -307,7 +307,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons = [
                     [
                         InlineKeyboardButton('More Bots', url='https://t.me/tvseriesg'),
-                        InlineKeyboardButton('Request Group', url='https://t.me/uploader4films')
+                        InlineKeyboardButton('Request Group', url='https://t.me/tvseriesreq')
                     ]
                     ]
                 
@@ -339,7 +339,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons = [
                     [
                         InlineKeyboardButton('More Bots', url='https://t.me/tvseriesg'),
-                        InlineKeyboardButton('Request Group', url='https://t.me/uploader4films')
+                        InlineKeyboardButton('Request Group', url='https://t.me/tvseriesreq')
                     ]
                     ]
                 
