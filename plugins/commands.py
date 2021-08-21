@@ -18,7 +18,7 @@ async def start(bot, cmd):
                 if user.status == "kicked":
                     await bot.send_message(
                         chat_id=cmd.from_user.id,
-                        text="ah, you're banned lmao",
+                        text="unauthorised user, fuckoff",
                         parse_mode="markdown",
                         disable_web_page_preview=True
                     )
@@ -36,11 +36,11 @@ async def start(bot, cmd):
                 ident, file_id = cmd.text.split("_-_-_-_")
                 await bot.send_message(
                     chat_id=cmd.from_user.id,
-                    text="**Go to @tvseriesreq to get access to this bot**",
+                    text="**BOT FOR GROUP MEMBERS**",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("Subscribe To The Request Group", url=invite_link.invite_link)
+                                InlineKeyboardButton("REQUEST GROUP", url='t.me/tvseriesreq')
                             ],
                             [
                                 InlineKeyboardButton("Try Again (After Subscribing)", callback_data=f"checksub#{file_id}")
@@ -95,7 +95,7 @@ async def start(bot, cmd):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Request Group", url=invite_link.invite_link)
+                        InlineKeyboardButton("Request Group", url='t.me/tvseriesreq')
                     ]
                 ]
             )
