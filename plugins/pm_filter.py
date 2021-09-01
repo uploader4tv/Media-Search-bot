@@ -68,7 +68,7 @@ async def filter(client, message):
                     [InlineKeyboardButton(text=f"{filename}",callback_data=f"subinps#{file_id}")]
                     )
         else:
-            await client.send_sticker(chat_id=message.from_user.id, sticker='CAACAgUAAxkBAALIEmEe8rK3XNnRUrJh_P75QRqqPtgeAALsBgACGr_wVI8vCHSo2viuIAQ')
+            await client.send_sticker(chat_id=message.from_user.id, sticker='CAACAgUAAxkBAALIGmEe9KnN7HWamjVwDRFiOryZq4ESAAIdAwACqev5VO5DWvU-5OkMIAQ')
             return
 
         if not btn:
@@ -281,8 +281,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "about":
             buttons = [
                 [
-                    InlineKeyboardButton('Request Group', url='https://t.me/joinchat/0DNQ8NT8rAE2ZTY1'),
-                    InlineKeyboardButton('Tutorial', url='https://telegra.ph/TUTORIAL-FOR-BOT-08-03')
+                    InlineKeyboardButton('Request Group', url='https://t.me/uploader4films'),
+                    InlineKeyboardButton('Tutorial', url='https://telegra.ph/TUTORIAL-FOR-BOT-08-19')
                 ]
                 ]
             
@@ -307,7 +307,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons = [
                     [
                         InlineKeyboardButton('More Bots', url='https://t.me/tvseriesg'),
-                        InlineKeyboardButton('Request Group', url='https://t.me/joinchat/0DNQ8NT8rAE2ZTY1')
+                        InlineKeyboardButton('Request Group', url='https://t.me/uploader4films')
                     ]
                     ]
                 
@@ -339,7 +339,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons = [
                     [
                         InlineKeyboardButton('More Bots', url='https://t.me/tvseriesg'),
-                        InlineKeyboardButton('Request Group', url='https://t.me/joinchat/0DNQ8NT8rAE2ZTY1')
+                        InlineKeyboardButton('Request Group', url='https://t.me/uploader4films')
                     ]
                     ]
                 
