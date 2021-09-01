@@ -39,7 +39,7 @@ async def filter(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("Request Group", url='t.me/tvseriesreq')
+                            InlineKeyboardButton("Request Group", url=invite_link.invite_link)
                         ]
                     ]
                 ),
@@ -281,7 +281,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "about":
             buttons = [
                 [
-                    InlineKeyboardButton('Request Group', url='https://t.me/tvseriesreq'),
+                    InlineKeyboardButton('Request Group', url=invite_link.invite_link),
                     InlineKeyboardButton('Tutorial', url='https://telegra.ph/TUTORIAL-FOR-BOT-08-03')
                 ]
                 ]
@@ -307,7 +307,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons = [
                     [
                         InlineKeyboardButton('More Bots', url='https://t.me/tvseriesg'),
-                        InlineKeyboardButton('Request Group', url='https://t.me/tvseriesreq')
+                        InlineKeyboardButton('Request Group', url=invite_link.invite_link)
                     ]
                     ]
                 
@@ -339,7 +339,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons = [
                     [
                         InlineKeyboardButton('More Bots', url='https://t.me/tvseriesg'),
-                        InlineKeyboardButton('Request Group', url='https://t.me/tvseriesreq')
+                        InlineKeyboardButton('Request Group', url=invite_link.invite_link)
                     ]
                     ]
                 
