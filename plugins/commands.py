@@ -112,7 +112,7 @@ async def start(bot, cmd):
                         InlineKeyboardButton("Other Bots", url="https://t.me/tvseriesg")
                     ],
                     [
-                        InlineKeyboardButton("Tutorial", url="https://telegra.ph/TUTORIAL-FOR-BOT-08-19"),
+                        InlineKeyboardButton("Tutorial", url="https://telegra.ph/TUTORIAL-FOR-THE-BOT-08-19"),
                         InlineKeyboardButton("Request", url='https://t.me/uploader4films')
                     ]
                 ]
@@ -203,7 +203,7 @@ async def bot_info(bot, message):
     buttons = [
         [
             InlineKeyboardButton('Update Channel', url='https://t.me/tvseriesg'),
-            InlineKeyboardButton('Tutorial', url='https://telegra.ph/TUTORIAL-FOR-BOT-08-19')
+            InlineKeyboardButton('Tutorial', url='https://telegra.ph/TUTORIAL-FOR-THE-BOT-08-19')
         ]
         ]
     await message.reply(text="<b>Developer : Uploader4 </a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\nClick here</a>\nUpdate Channel : <a href='https://t.me/tvseriesg'>TVSERIESG</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
