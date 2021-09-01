@@ -281,7 +281,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "about":
             buttons = [
                 [
-                    InlineKeyboardButton('Request Group', url=invite_link.invite_link),
+                    InlineKeyboardButton('Request Group', url='https://t.me/joinchat/0DNQ8NT8rAE2ZTY1'),
                     InlineKeyboardButton('Tutorial', url='https://telegra.ph/TUTORIAL-FOR-BOT-08-03')
                 ]
                 ]
@@ -307,7 +307,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons = [
                     [
                         InlineKeyboardButton('More Bots', url='https://t.me/tvseriesg'),
-                        InlineKeyboardButton('Request Group', url=invite_link.invite_link)
+                        InlineKeyboardButton('Request Group', url='https://t.me/joinchat/0DNQ8NT8rAE2ZTY1')
                     ]
                     ]
                 
@@ -339,7 +339,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons = [
                     [
                         InlineKeyboardButton('More Bots', url='https://t.me/tvseriesg'),
-                        InlineKeyboardButton('Request Group', url=invite_link.invite_link)
+                        InlineKeyboardButton('Request Group', url='https://t.me/joinchat/0DNQ8NT8rAE2ZTY1')
                     ]
                     ]
                 
