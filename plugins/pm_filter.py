@@ -282,7 +282,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             buttons = [
                 [
                     InlineKeyboardButton('Request Group', url='https://t.me/uploader4films'),
-                    InlineKeyboardButton('Tutorial', url='https://telegra.ph/TUTORIAL-FOR-BOT-08-19')
+                    InlineKeyboardButton('Tutorial', url='https://telegra.ph/TUTORIAL-FOR-THE-BOT-08-19')
                 ]
                 ]
             
