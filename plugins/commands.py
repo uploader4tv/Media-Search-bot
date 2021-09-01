@@ -40,7 +40,7 @@ async def start(bot, cmd):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("REQUEST GROUP", url=invite_link.invite_link)
+                                InlineKeyboardButton("REQUEST GROUP", url='https://t.me/joinchat/0DNQ8NT8rAE2ZTY1')
                             ],
                             [
                                 InlineKeyboardButton("Try Again (After Subscribing)", callback_data=f"checksub#{file_id}")
@@ -76,7 +76,7 @@ async def start(bot, cmd):
                 buttons = [
                     [
                         InlineKeyboardButton('Search Again', switch_inline_query_current_chat=''),
-                        InlineKeyboardButton('Request Shows', url=invite_link.invite_link)
+                        InlineKeyboardButton('Request Shows', url='https://t.me/joinchat/0DNQ8NT8rAE2ZTY1')
                     ]
                     ]
                 await bot.send_cached_media(
@@ -95,7 +95,7 @@ async def start(bot, cmd):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Request Group", url=invite_link.invite.link)
+                        InlineKeyboardButton("Request Group", url='https://t.me/joinchat/0DNQ8NT8rAE2ZTY1')
                     ]
                 ]
             )
@@ -113,7 +113,7 @@ async def start(bot, cmd):
                     ],
                     [
                         InlineKeyboardButton("Tutorial", url="https://telegra.ph/TUTORIAL-FOR-BOT-08-03"),
-                        InlineKeyboardButton("Request", url=invite_link.invite_link)
+                        InlineKeyboardButton("Request", url='https://t.me/joinchat/0DNQ8NT8rAE2ZTY1')
                     ]
                 ]
             )
