@@ -40,7 +40,7 @@ async def start(bot, cmd):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("REQUEST GROUP", url='https://t.me/joinchat/0DNQ8NT8rAE2ZTY1')
+                                InlineKeyboardButton("REQUEST GROUP", url='https://t.me/uploader4films')
                             ],
                             [
                                 InlineKeyboardButton("Try Again (After Subscribing)", callback_data=f"checksub#{file_id}")
@@ -76,7 +76,7 @@ async def start(bot, cmd):
                 buttons = [
                     [
                         InlineKeyboardButton('Search Again', switch_inline_query_current_chat=''),
-                        InlineKeyboardButton('Request Shows', url='https://t.me/joinchat/0DNQ8NT8rAE2ZTY1')
+                        InlineKeyboardButton('Request Shows', url='https://t.me/uploader4films')
                     ]
                     ]
                 await bot.send_cached_media(
@@ -95,7 +95,7 @@ async def start(bot, cmd):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Request Group", url='https://t.me/joinchat/0DNQ8NT8rAE2ZTY1')
+                        InlineKeyboardButton("Request Group", url='https://t.me/uploader4films')
                     ]
                 ]
             )
@@ -112,8 +112,8 @@ async def start(bot, cmd):
                         InlineKeyboardButton("Other Bots", url="https://t.me/tvseriesg")
                     ],
                     [
-                        InlineKeyboardButton("Tutorial", url="https://telegra.ph/TUTORIAL-FOR-BOT-08-03"),
-                        InlineKeyboardButton("Request", url='https://t.me/joinchat/0DNQ8NT8rAE2ZTY1')
+                        InlineKeyboardButton("Tutorial", url="https://telegra.ph/TUTORIAL-FOR-BOT-08-19"),
+                        InlineKeyboardButton("Request", url='https://t.me/uploader4films')
                     ]
                 ]
             )
@@ -203,7 +203,7 @@ async def bot_info(bot, message):
     buttons = [
         [
             InlineKeyboardButton('Update Channel', url='https://t.me/tvseriesg'),
-            InlineKeyboardButton('Tutorial', url='https://telegra.ph/TUTORIAL-FOR-BOT-08-03')
+            InlineKeyboardButton('Tutorial', url='https://telegra.ph/TUTORIAL-FOR-BOT-08-19')
         ]
         ]
     await message.reply(text="<b>Developer : Uploader4 </a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\nClick here</a>\nUpdate Channel : <a href='https://t.me/tvseriesg'>TVSERIESG</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
