@@ -76,7 +76,7 @@ async def start(bot, cmd):
                 buttons = [
                     [
                         InlineKeyboardButton('Search Again', switch_inline_query_current_chat=''),
-                        InlineKeyboardButton('Request Shows', url='https://t.me/uploader4films')
+                        InlineKeyboardButton('Request Films', url='https://t.me/joinchat/TFyM4GL8ffthNjll')
                     ]
                     ]
                 await bot.send_cached_media(
