@@ -18,7 +18,7 @@ async def filter(client, message):
             if user.status == "kicked":
                 await client.send_message(
                     chat_id=message.from_user.id,
-                    text="mate, you're banned, go beg for files somewhere else",
+                    text="User Status : **Banned** ; Try Some Other Group",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
@@ -281,7 +281,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "about":
             buttons = [
                 [
-                    InlineKeyboardButton('Request Group', url='https://t.me/uploader4films'),
+                    InlineKeyboardButton('Request Group', url='https://t.me/joinchat/TFyM4GL8ffthNjll'),
                     InlineKeyboardButton('Tutorial', url='https://telegra.ph/TUTORIAL-FOR-THE-BOT-08-19')
                 ]
                 ]
@@ -307,7 +307,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons = [
                     [
                         InlineKeyboardButton('More Bots', url='https://t.me/tvseriesg'),
-                        InlineKeyboardButton('Request Group', url='https://t.me/uploader4films')
+                        InlineKeyboardButton('Request Group', url='https://t.me/joinchat/TFyM4GL8ffthNjll')
                     ]
                     ]
                 
@@ -339,7 +339,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons = [
                     [
                         InlineKeyboardButton('More Bots', url='https://t.me/tvseriesg'),
-                        InlineKeyboardButton('Request Group', url='https://t.me/uploader4films')
+                        InlineKeyboardButton('Request Group', url='https://t.me/joinchat/TFyM4GL8ffthNjll')
                     ]
                     ]
                 
