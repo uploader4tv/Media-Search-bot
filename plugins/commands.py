@@ -40,7 +40,7 @@ async def start(bot, cmd):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("REQUEST GROUP", url='https://t.me/uploader4films')
+                                InlineKeyboardButton("REQUEST GROUP", url='https://t.me/joinchat/TFyM4GL8ffthNjll')
                             ],
                             [
                                 InlineKeyboardButton("Try Again (After Subscribing)", callback_data=f"checksub#{file_id}")
@@ -95,7 +95,7 @@ async def start(bot, cmd):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Request Group", url='https://t.me/uploader4films')
+                        InlineKeyboardButton("Request Group", url='https://t.me/joinchat/TFyM4GL8ffthNjll')
                     ]
                 ]
             )
@@ -113,7 +113,7 @@ async def start(bot, cmd):
                     ],
                     [
                         InlineKeyboardButton("Tutorial", url="https://telegra.ph/TUTORIAL-FOR-THE-BOT-08-19"),
-                        InlineKeyboardButton("Request", url='https://t.me/uploader4films')
+                        InlineKeyboardButton("Request", url='https://t.me/joinchat/TFyM4GL8ffthNjll')
                     ]
                 ]
             )
