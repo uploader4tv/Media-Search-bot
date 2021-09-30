@@ -18,7 +18,7 @@ async def filter(client, message):
             if user.status == "kicked":
                 await client.send_message(
                     chat_id=message.from_user.id,
-                    text="User Status : **Banned** \n Respectfully Fuckoff \n Still want a second chance? Go to @requestboxbans",
+                    text="User Status : **Banned** \nRespectfully **Fuckoff** \nStill want a second chance? Go to @requestboxbans",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
