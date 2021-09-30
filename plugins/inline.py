@@ -16,7 +16,7 @@ async def answer(bot, query):
     if AUTH_CHANNEL and not await is_subscribed(bot, query):
         await query.answer(results=[],
                            cache_time=0,
-                           switch_pm_text='Click here to access the bot',
+                           switch_pm_text='CLICK HERE to access the bot (literally)',
                            switch_pm_parameter="subscribe")
         return
     userid = int(query.from_user.id)
@@ -76,7 +76,7 @@ async def answer(bot, query):
                            next_offset=str(next_offset))
     else:
 
-        switch_pm_text = f'{emoji.CROSS_MARK} Tip : Remove any punctuation marks'
+        switch_pm_text = f'{emoji.CROSS_MARK} Tip : Try removing any punctuation marks'
         if string:
             switch_pm_text += f' for "{string}"'
 
