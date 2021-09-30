@@ -18,7 +18,7 @@ async def filter(client, message):
             if user.status == "kicked":
                 await client.send_message(
                     chat_id=message.from_user.id,
-                    text="mate, you're banned, go beg for files somewhere else",
+                    text="User Status : **Banned** \n Respectfully Fuckoff \n Still want a second chance? Go to @requestboxbans",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
@@ -68,7 +68,7 @@ async def filter(client, message):
                     [InlineKeyboardButton(text=f"{filename}",callback_data=f"subinps#{file_id}")]
                     )
         else:
-            await client.send_sticker(chat_id=message.from_user.id, sticker='CAACAgUAAxkBAALIEmEe8rK3XNnRUrJh_P75QRqqPtgeAALsBgACGr_wVI8vCHSo2viuIAQ')
+            await client.send_sticker(chat_id=message.from_user.id, sticker='CAACAgUAAxkBAALPhmFV5Y4zDYb7hiHOL4u3l-8lt0yUAAIlBgACyYixVglPk6CZq5QkIQQ')
             return
 
         if not btn:
